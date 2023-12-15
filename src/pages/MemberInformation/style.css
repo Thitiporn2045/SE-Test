@@ -1,0 +1,333 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --clr: #CC1010;
+    --textinput: #414141;
+    --input: #fff
+}
+
+.MemberInformation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(https://images.pexels.com/photos/13967665/pexels-photo-13967665.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+
+.MemberInformation .card{
+    position: relative;
+    width: 600px;
+    height: 700px;
+    background: rgba(126, 126, 126, 0.46);
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    box-shadow: 10px 20px 40px rgba(0, 0, 0, 0.25);
+    transition: 1s;
+}
+
+.MemberInformation .card:hover{
+    transform: translateX(50%);
+}
+.MemberInformation .card .imgBox{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transform-origin: left;
+    transform-style: preserve-3d;
+    background: rgba(255, 255, 255, 0.16);
+    transition: 1s;
+    box-shadow: 10px 20px 40px rgba(0, 0, 0, 0.95);
+}
+
+.MemberInformation .card .imgBox .profile{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.MemberInformation .profile .cardbg{
+    position: absolute;
+    width: 400px;
+    height: 580px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    background: #121212;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    color: #999;
+}
+
+.MemberInformation .cardbg .name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    font-weight: 500;
+    gap: 10px;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.MemberInformation .profile .cardbg img.pro{
+    position: relative;
+    left: 35px;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+.MemberInformation .profile .cardbg label{
+    display: block;
+    width: 200px;
+    background: #CC1010;
+    color: #fff;
+    padding: 12px;
+    margin: 10px auto;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.MemberInformation .profile .cardbg label:hover{
+    transform: scale(1.05);
+    background: var(--clr1);
+    box-shadow: 0 0 10px #e90d0d, 0 0 40px #e90d0d, 0 0 80px #e90d0d;
+}
+
+.MemberInformation .profile .cardbg input{
+    display: none;
+}
+
+.MemberInformation .card:hover .imgBox{
+    transform: rotateY(-180deg);
+}
+.MemberInformation .card:hover .name{
+    transform: perspective(1000px) rotateY(180deg);
+    transition: .4s ease-out;
+}
+.MemberInformation .card:hover .cardbg label{
+    transform: perspective(1000px) rotateY(180deg);
+    transition: .4s ease-out;
+}
+.MemberInformation .card:hover p{
+    transform: perspective(1000px) rotateY(180deg);
+    transition: .4s ease-out;
+}
+.MemberInformation .card:hover .profilrimg{
+    transform: perspective(1000px) rotateY(180deg);
+}
+.MemberInformation .card .imgBox img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+}
+
+.MemberInformation .card .imgBox img:nth-child(2){
+    transform: rotateY(180deg);
+}
+
+.MemberInformation .card .datails{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.MemberInformation .card .datails .content{
+    display: flex;
+    position: absolute;
+    margin: 20px;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.MemberInformation .card .datails .content h2{
+    text-align: center;
+    line-height: 1em;
+}
+
+.MemberInformation .card .datails .content h2 span{
+    color: #CC1010;
+    font-size: 0.8em;
+}
+
+.MemberInformation form{
+    background: rgba(18, 18, 18, 0.64);
+    padding: 0px 80px 0px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.MemberInformation form h2{
+    color: var(--input);
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 1.25em;
+    letter-spacing: 0.1em;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.inputBox{
+    position: relative;
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+.inputBoxdate{
+    position: relative;
+    width: 300px;
+    margin-bottom: 40px;
+}
+
+.inputBox input{
+    position: relative;
+    width: 100%;
+    padding: 10px 0;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid var(--input);
+    outline: none;
+    color: var(--input);
+    font-size: 1em;
+    letter-spacing: 0.15em;
+}
+
+.inputBox .Gender{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40%;
+    font-size: 1em;
+    color: #fff;
+    margin-top: 10px;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.inputBox .MemberType{
+    position: absolute;
+    top: -20px;
+    right: 0;
+    width: 50%;
+    font-size: 1em;
+    color: #fff;
+    margin-top: 10px;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.inputBox select:hover{
+    color: var(--input);
+    cursor: pointer;
+    border-bottom: 2px solid var(--input);
+
+}
+
+.inputBox label.date{
+    position: absolute;
+    top: -50%;
+    left: 0;
+    padding: 10px 0;
+    pointer-events: none;
+    color: var(--input);
+    text-transform: uppercase;
+}
+
+.inputBox label{
+    position: absolute;
+    left: 0;
+    padding: 10px 0;
+    pointer-events: none;
+    color: var(--input);
+    text-transform: uppercase;
+}
+
+.inputBox label span{
+    position: relative;
+    display: inline-flex;
+    letter-spacing: 0.05em;
+    transition: 0.2s ease-in-out;
+
+}
+
+.inputBox label.date span{
+    position: relative;
+    display: inline-flex;
+    letter-spacing: 0.05em;
+    transition: 0.2s ease-in-out;
+
+}
+
+.inputBox input:focus ~ label.date span,
+.inputBox input:valid ~ label.date span{
+    color: var(--clr);
+    letter-spacing: 0.15em;
+    transform: translateY(3px);
+}
+
+.inputBox input:focus ~ label span,
+.inputBox input:valid ~ label span{
+    color: var(--clr);
+    letter-spacing: 0.15em;
+    transform: translateY(-25px);
+}
+
+.inputBox input:focus,
+.inputBox input:valid{
+    border-bottom: 2px solid var(--clr);
+}
+
+.inputBox input[type="submit"]{
+    background: var(--clr);
+    border: none;
+    margin-top: 20px;
+    padding: 8px;
+    border-radius: 50px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.inputBox input[type="submit"]:hover{
+    letter-spacing: 0.35em;
+    color: #fff;
+    background: var(--clr);
+    box-shadow: 0 0 10px var(--clr), 0 0 40px var(--clr);
+}

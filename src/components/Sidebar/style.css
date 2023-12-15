@@ -1,0 +1,118 @@
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-top: 4rem;
+    transition: all 300ms ease;
+}
+  /* logo */
+.Sidebar .bars{
+    display: none;
+}
+
+.Sidebar .logo {
+    display: flex;
+    height: 5rem;
+    font-weight: bold;
+    font-size: 22px;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    height: 4%;
+}
+.Sidebar .logo > span{
+    color: #ffffff;
+}
+
+.Sidebar .logo > img {
+    width: 2rem;
+    height: 2rem;
+}
+
+
+  /* menu */
+.Sidebar .menu {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.Sidebar .menuItem {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    height: 2.5rem;
+    margin-left: 2rem;
+    position: relative;
+    transition: all 300ms ease;
+    border-radius: 0.7rem;
+    font-size: 14px;
+}
+
+.Sidebar.menuItem:hover {
+    cursor: pointer;
+}
+
+.Sidebar .menu .menuItem:last-child {
+    position: absolute;
+    bottom: 2.3rem;
+    width: 100%;
+}
+
+.Sidebar .active {
+    background: rgb(255, 222, 222);
+    margin-left: 0;
+}
+.Sidebar .active::before {
+    content: "";
+    width: 8px;
+    height: 100%;
+    background: #CC1010;
+    margin-right: calc(1rem - 8px);
+}
+
+
+/* Tablets */
+@media screen and (max-width: 1200px) {
+    .menuItem>span{
+        display: none;
+    }
+    .logo{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .sidebar{
+        position: fixed;
+        z-index: 9;
+        background: #ffe0e0;
+        width: 55%;
+        padding-right: 1rem;
+        height: 100%;
+    }
+    .menuItem>span{
+        display: block;
+    }
+    .logo{
+        display: flex;
+    }
+    .menu .menuItem:last-child {
+        position: relative;
+        margin-top: 6rem;
+    }
+    .bars{
+        display: flex;
+        position: fixed;
+        top: 2rem;
+        left:60%;
+        background:#ffe0e0;
+        padding:10px;
+        border-radius: 10px;
+        z-index: 9;
+    }
+    .close{
+        left: -60%;
+    }
+}
+

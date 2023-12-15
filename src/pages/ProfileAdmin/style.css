@@ -1,0 +1,193 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.ProfileAdmin{
+    color: var(--black);
+    background: #1F1F1F;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+}
+
+.Navbar {
+    margin-top: 0;
+}
+
+.ProfileAdmin .box{
+    display: grid;
+    height: 97%;
+    width: 97%;
+    border-radius: 2rem;
+    gap: 16px;
+    grid-template-columns: 15rem auto;
+    overflow: hidden;
+}
+
+.ProfileAdmin .box .sidebar{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-top: 3rem;
+    transition: all 300ms ease;
+    background: #d7d7d7;
+    align-items: center;
+    box-shadow: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
+    border: 1px solid  hsl(0, 0%, 75%);
+    border-radius: 25px;
+
+}
+
+.ProfileAdmin .box form {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-top: 3rem;
+    transition: all 300ms ease;
+    background: hsl(240, 2%, 12%);
+    align-items: center;
+    box-shadow: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
+    border: 1px solid  hsl(0, 0%, 22%);
+}
+
+.ProfileAdmin .box .sidebar .sidebar-info{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.sidebar-info .avatar-box {
+    width: 180px;
+    height: 400px;
+    position: relative;
+    border-radius: 25px;
+    left: 13%;
+}
+
+.sidebar-info .avatar-box img{
+    width: 130px;
+    height: 130px;
+    position: absolute;
+    border-radius: 50%;
+    margin-top: 10px;
+    left: 8%;
+    overflow: hidden;
+    object-fit: cover;
+    border: 6px solid  hsl(0, 0%, 17%);
+}
+
+.ProfileAdmin .info-content{
+    position: relative;
+    top: -30px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    color: #b2b2b2;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ProfileAdmin .info-content p{
+    color: #5d5d5d;
+}
+
+.ProfileAdmin .sidebar-info_more{
+    position: relative;
+    top: 45px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-item{
+    min-width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    text-decoration: none;
+    list-style: none;
+}
+
+.ProfileAdmin .contacts-list{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+.ProfileAdmin .icon-box{
+    position: relative;
+    background: linear-gradient(
+        to bottom right, 
+        hsl(0, 0%, 53%) 0%, 
+        hsla(0, 0%, 95%, 0) 50%
+    );
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    color: #cc1010ec;
+    box-shadow:  -4px 8px 24px hsla(0, 0%, 0%, 0.25);
+    z-index: 1;
+}
+
+.icon-box::before {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    background:  hsl(240, 2%, 13%);
+    border-radius: inherit;
+    z-index: -1;
+}
+
+
+.contact-info {
+    max-width: calc(100% - 46px);
+    width: calc(100% - 46px);
+}
+
+.contact-title {
+    color: hsla(0, 0%, 84%, 0.7);
+    font-size: .8em;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+    font-weight: 500;
+}
+
+.contact-info .dataAdmin {
+    color: hsla(0, 0%, 98%, 0.844);
+    font-size: 1em;
+}
+
+.separator .buttom{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 200px;
+}
+
+.separator .buttom button{
+    width: 100%;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.separator .buttom button:hover{
+    text-shadow: 0 0 10px #e4e4e4, 0 0 40px #e4e4e4, 0 0 80px #e4e4e4;
+}

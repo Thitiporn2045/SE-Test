@@ -1,0 +1,50 @@
+
+body {
+    font-family: Viga;
+    margin: 0;
+    background-color: #010101;
+    color: #eee;
+    font-family: 'Poppins', sans-serif;
+}
+
+svg {
+    width: 25px;
+}
+
+.Navbar {
+    width: 100vw;
+    margin: auto;
+    display: grid;
+    background-color: #CC1010;
+    border-bottom: 5px solid #920404;
+    grid-template-columns: 50px 1fr 50px;
+    grid-template-rows: 45px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+}
+
+.Navbar .menu{
+    display: flex;
+    align-items: center;
+    padding-left: 1450px;
+    font-size: 40px;
+}
+
+.Navbar .logo {
+    display: flex;
+    align-items: center;
+    width: 200px;
+    padding-top: 5px;
+    padding-left: 40px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.Navbar .logo img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px; /* ปรับตำแหน่งของรูปภาพให้มีระยะห่างทางขวา */
+    object-fit: cover;
+}

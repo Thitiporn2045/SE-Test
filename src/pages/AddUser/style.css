@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --color-primary: #CC1010;
+    --color-danger: #6f6262;
+    --color-success: #116D6E;
+    --color-warning: #ffbb55;
+    --color-white: #fff;
+    --color-info-dark: #7d8da1;
+    --color-info-light: #dce1eb;
+    --color-dark: #363949;
+    --color-light: rgba(132, 139, 200, 0.18);
+    --color-primary-variant: #111e88;
+    --color-dark-variant: #677483;
+    --color-background: #f6f6f9;
+
+    --color-select: #eceef4;
+
+    --card-border-radius: 2rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 0.8rem;
+    --border-radius-3: 1.2rem;
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
+    --box-shadow: 0 2rem 3rem var(--color-light);
+}
+
+/* ------DARK THEME VARAIBLES -------*/
+.dark-theme-variables {
+    --color-background: #181a1e;
+    --color-white: #202528;
+    --color-dark: #edeffd;
+    --color-dark-variant: #a3bdcc;
+    --color-light: rgba(0, 0, 0, 0.4);
+    --box-shadow: 0 2rem 3rem var(--color-light);
+    --color-select: #12121285;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    appearance: none;
+    border: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: poppins, sans-serif;
+}
+
+a{
+    color: var(--color-dark);
+}
+
+img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+h1{
+    font-weight: 800;
+    font-size: 1.8rem;
+}
+h2{
+    font-size: 1.4rem;
+}
+h3{
+    font-size: 0.87rem;
+}
+h4{
+    font-size: 0.8rem;
+}
+h5{
+    font-size: 0.77rem;
+}
+
+small{
+    font-size: 0.75rem;
+}
+
+.addMember{
+    width: 100vw;
+    height: 100vh;
+    font-size: 0.88rem;
+    background: var(--color-background);
+    font-size: 14px;
+    user-select: none;
+    overflow: hidden;
+    overflow-y: auto;
+    color: var(--color-dark);
+}
+
+.addMember .container{
+    display: grid;
+    width: 96%;
+    margin: 0 auto;
+    gap: 1.8rem;
+    grid-template-columns: 12rem auto;
+}
+
+.addMember .right{
+    position: relative;
+    top: -80px;
+}
+.texttitle{
+    position: relative;
+    top: -25px;
+    left: 0;
+}
+
+.addMember span{
+    font-size: 1.3rem;
+    transition: all 300ms ease;
+}
+
+.addMember main .recent-orders {
+    margin-top: 2rem;
+}
+
+.addMember main .recent-orders h2{
+    margin-bottom: 0.8rem;
+}
+
+.addMember hr{
+    position: relative;
+    top: -50px;
+    border: 1.5px solid var(--color-info-light);
+}
+
+.buttomNew{
+    display: flex;
+    justify-content: end;
+    margin-bottom: -40px;
+}
+
+.addMember .recent-orders .Table .newUser{
+    position: relative;
+    top: -70px;
+    padding: .5rem;
+    border-radius: var(--border-radius-1);
+    font-size: 1rem;
+    right: 0;
+    color: var(--color-white);
+    background: #CC1010;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
+.addMember .newUser:hover{
+    transform: scale(1.05);
+    background: #e90d0d;
+    box-shadow: 0 0 10px #e90d0d, 0 0 40px #e90d0d;
+}
+
+.addMember .custom-modal-overlay{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: -50px;
+    border-radius: var(--border-radius-3);
+    box-shadow: var(--box-shadow);
+    margin-bottom: 30px;
+    background: url(https://img.freepik.com/free-photo/3d-grunge-room-interior-with-spotlight-smoky-atmosphere-background_1048-11333.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.addMember .custom-modal-overlay .custom-modal{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 30px;
+    padding: 3rem;
+    border-radius: var(--border-radius-3);
+    color: var(--color-info-dark);
+    background: #fff;
+}
+
+.addMember .custom-modal-overlay .custom-modal h2{
+    position: relative;
+    top: -20px;
+    margin-bottom: 0px;
+}
+
+.addMember .contentIN{
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-direction: column;
+}
+/* ------------------------------------------ */
+
+.inputBoxM{
+    position: relative;
+    width: 300px;
+    margin-bottom: 20px;
+    font-size: 1em;
+}
+
+.inputBoxM input{
+    position: relative;
+    width: 100%;
+    padding: 10px 0;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #363949;
+    outline: none;
+    color: var(--color-info-dark);
+    font-size: 1em;
+    letter-spacing: 0.15em;
+}
+
+.inputBoxM select:hover{
+    color: var(--color-info-dark);
+    cursor: pointer;
+    border-bottom: 2px solid #363949;
+
+}
+
+.inputBoxM label{
+    position: absolute;
+    left: 0;
+    padding: 10px 0;
+    pointer-events: none;
+    color: var(--color-info-dark);
+    text-transform: uppercase;
+}
+
+.inputBoxM label span{
+    position: relative;
+    display: inline-flex;
+    letter-spacing: 0.05em;
+    font-size: 1em;
+    transition: 0.2s ease-in-out;
+
+}
+
+.inputBoxM input:focus ~ label span,
+.inputBoxM input:valid ~ label span{
+    color: var(--color-primary);
+    letter-spacing: 0.15em;
+    transform: translateY(-25px);
+    font-size: 1em;
+}
+
+.inputBoxM input:focus,
+.inputBoxM input:valid{
+    border-bottom: 2px solid var(--color-primary);
+}
+
+/* --------------------------------- */
+.Table {
+    position: relative;
+    top: -30px;
+}
+.Table table{
+    background: var(--color-white);
+    width: 100%;
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    transition: all 300ms ease;
+}
+
+.Table table:hover{
+    box-shadow: none;
+}
+
+.Table table tbody td{
+    height: 3rem;
+    border-bottom: 1px solid var(--color-light);
+    color: var(--color-dark-variant);
+
+}
+
+.Table table tbody tr:last-child td{
+    border: none;
+}
+
+.Table table tbody tr:hover{
+    background: var(--color-select);
+}
+
+.Table table tbody tr td:last-child td{
+    color: var(--color-primary);
+
+}
+
+/* ------------------------------------- */
+
+.addMember .buttonCS{
+    display: flex;
+    justify-content: end;
+    margin-bottom: -40px;
+    gap: 10px;
+}
+
+.addMember .buttonCS button{
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: .5rem;
+    border-radius: var(--border-radius-1);
+    font-size: 1rem;
+    right: 0;
+    color: var(--color-info-dark);
+    background: transparent;
+    border: 1.5px solid var(--color-info-dark);
+    cursor: pointer;
+}
+
+.addMember .buttonCS button:last-child{
+    border: none;
+    color: #fff;
+    background: #CC1010;
+}
+
+.addMember .buttonCS button:last-child:hover{
+    transform: scale(1.05);
+    background: #e90d0d;
+    box-shadow: 0 0 10px #e90d0d, 0 0 40px #e90d0d;
+}
+
+.addMember .change{
+    padding: .5rem;
+    border-radius: var(--border-radius-1);
+    font-size: .9em;
+    background: transparent;
+    color: var(--color-danger);
+    border: 1.5px solid var(--color-danger);
+    margin-right: 10px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.addMember .change:hover{
+    background: var(--color-danger);
+    color: var(--color-white);
+    text-shadow: 0 0 10px var(--color-danger), 0 0 40px var(--color-danger);
+    box-shadow: 0 0 10px var(--color-danger), 0 0 40px var(--color-danger);
+}
+
+.addMember .delete{
+    padding: .5rem;
+    justify-content: end;
+    border-radius: var(--border-radius-1);
+    font-size: .9em;
+    background: transparent;
+    border: 1.5px solid #CC1010;
+    color: #CC1010;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.addMember .delete:hover{
+    color: #fff;
+    background: #e90d0d;
+    box-shadow: 0 0 10px #e90d0d, 0 0 40px #e90d0d;
+}
